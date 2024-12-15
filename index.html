@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос о настроении</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Опрос о настроении</h1>
+        <form id="moodSurvey">
+            <div class="question">
+                <label>1. Как бы вы описали своё текущее состояние?</label><br>
+                <input type="radio" name="question1" value="joyful"> Полон радости<br>
+                <input type="radio" name="question1" value="neutral"> В равновесии<br>
+                <input type="radio" name="question1" value="inspired"> Вдохновлённый<br>
+                <input type="radio" name="question1" value="bored"> Не в настроении<br>
+                <input type="radio" name="question1" value="anxious"> Чувствую тревогу<br>
+                <input type="radio" name="question1" value="calm"> Умиротворённый<br>
+            </div>
+
+            <div class="question">
+                <label>2. Какой оттенок вам кажется наиболее привлекательным в данный момент?</label><br>
+                <input type="radio" name="question2" value="blue"> Глубокий синий<br>
+                <input type="radio" name="question2" value="yellow"> Яркий солнечный<br>
+                <input type="radio" name="question2" value="red"> Насыщенный красный<br>
+                <input type="radio" name="question2" value="green"> Спокойный зелёный<br>
+                <input type='radio' name='question2' value='purple'> Мистический фиолетовый<br>
+            </div>
+
+            <div class="question">
+                <label>3. Какой ваш любимый способ провести время?</label><br>
+                <input type='radio' name='question3' value='outdoor'> На свежем воздухе<br>
+                <input type='radio' name='question3' value='indoor'> В уютной обстановке<br>
+                <input type='radio' name='question3' value='with_friends'> В компании друзей<br>
+                <input type='radio' name='question3' value='traveling'> В путешествиях<br>
+            </div>
+
+            <div class="question">
+                <label>4. Какой ваш любимый напиток?</label><br>
+                <input type='radio' name='question4' value='coffee'> Кофе<br>
+                <input type='radio' name='question4' value='tea'> Чай<br>
+                <input type='radio' name='question4' value='juice'> Сок<br>
+                <input type='radio' name='question4' value='water'> Вода<br>
+            </div>
+
+            <div class="question">
+                <label>5. Какой ваш любимый вид музыки?</label><br>
+                <input type='radio' name='question5' value='pop'> Поп<br>
+                <input type='radio' name='question5' value='rock'> Рок<br>
+                <input type='radio' name='question5' value='classical'> Классическая<br>
+                <input type='radio' name='question5' value='jazz'> Джаз<br>
+            </div>
+
+            <div class='question'>
+                <label>6. Какой ваш любимый способ расслабиться?</label><br>
+                <input type='radio' name='question6' value='reading'> Чтение книги<br>
+                <input type='radio' name='question6' value='sports'> Занятия спортом<br>
+                <input type='radio' name='question6' value='meditation'> Медитация<br>
+                <input type='radio' name='question6' value='watching_movies'> Просмотр фильмов<br>
+            </div>
+
+            <button type='button' onclick='calculateMood()'>Узнать, какой ты картхолдер</button>
+        </form>
+
+        <!-- Место для вывода текста и картинки -->
+        <div class='result' id='moodResult'>
+            <!-- Здесь будет текст -->
+            <p id='moodText'></p> 
+            <!-- Здесь будет изображение -->
+            <img id='moodImage' src='' alt='' style='display:none;'>
+        </div>
+
+        <!-- Стили для изображений -->
+        <style>
+            .result {
+                text-align: center;
+            }
+            .result img {
+                max-width: 100%;
+                height: auto;
+                margin-top: 20px;
+            }
+        </style>
+    </div>
+
+    <script src='script.js'></script>
+</body>
+</html>
